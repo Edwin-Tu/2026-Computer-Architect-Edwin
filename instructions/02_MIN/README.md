@@ -32,4 +32,3 @@
 - [CP2 報告](report/CP2.md)
 - [測試腳本](tests/check_cp2.py)
 - [實驗紀錄](report/CP2_MIN_執行指令與實驗紀錄.md)
-- [最後檢查](report/CP2_FINAL_CHECK.md)
