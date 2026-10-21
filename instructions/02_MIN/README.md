@@ -26,3 +26,10 @@
 | CP2 RV32IM | [目錄說明](rv32im/README.md) |
 | CP3 指令規格與編碼 | [目錄說明](spec/README.md) |
 | 參考資料 | [目錄說明](references/README.md) |
+
+## CP2 繳交索引
+
+- [CP2 報告](report/CP2.md)
+- [測試腳本](tests/check_cp2.py)
+- [實驗紀錄](report/CP2_MIN_執行指令與實驗紀錄.md)
+- [最後檢查](report/CP2_FINAL_CHECK.md)
