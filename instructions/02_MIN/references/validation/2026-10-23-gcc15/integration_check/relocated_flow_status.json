@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-23T07:46:43.864665+00:00",
+  "command": [
+    "C:\\Users\\kuro\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "-B",
+    "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_dev_integration_20261023_154353\\project\\instructions\\02_MIN\\references\\validation\\2026-10-23-gcc15\\source_snapshot\\tests\\test_cp2_flow.py"
+  ],
+  "returncode": 0,
+  "kind": "relocated_flow_regressions_NOT_fresh_RISCV_build",
+  "previous_capture": "PowerShell treated unittest stderr as NativeCommandError although all22 reported OK; original capture retained; new run uses raw stdout/stderr and distinct output."
+}

@@ -1,0 +1,27 @@
+test_abi_clobber_is_rejected (__main__.FlowTests.test_abi_clobber_is_rejected) ... ok
+test_branch_outside_executable_data_is_rejected (__main__.FlowTests.test_branch_outside_executable_data_is_rejected) ... ok
+test_callee_saved_register_restored_is_accepted (__main__.FlowTests.test_callee_saved_register_restored_is_accepted) ... ok
+test_command_log_is_not_overwritten (__main__.FlowTests.test_command_log_is_not_overwritten) ... ok
+test_command_nonzero_is_failure_and_logged (__main__.FlowTests.test_command_nonzero_is_failure_and_logged) ... ok
+test_compiler_success_without_new_elf_is_rejected (__main__.FlowTests.test_compiler_success_without_new_elf_is_rejected) ... ok
+test_existing_output_is_never_overwritten (__main__.FlowTests.test_existing_output_is_never_overwritten) ... ok
+test_jump_to_executable_helper_is_accepted (__main__.FlowTests.test_jump_to_executable_helper_is_accepted) ... ok
+test_missing_riscv_compiler_cli_is_failure (__main__.FlowTests.test_missing_riscv_compiler_cli_is_failure) ... ok
+test_missing_source_is_failure (__main__.FlowTests.test_missing_source_is_failure) ... ok
+test_native_arguments_and_summary_contract (__main__.FlowTests.test_native_arguments_and_summary_contract) ... ok
+test_native_crlf_failure_is_not_accepted (__main__.FlowTests.test_native_crlf_failure_is_not_accepted) ... ok
+test_native_crlf_summary_is_accepted (__main__.FlowTests.test_native_crlf_summary_is_accepted) ... ok
+test_native_failed_process_is_not_pass (__main__.FlowTests.test_native_failed_process_is_not_pass) ... ok
+test_native_missing_tool_is_not_pass (__main__.FlowTests.test_native_missing_tool_is_not_pass) ... ok
+test_native_wrong_summary_is_failure (__main__.FlowTests.test_native_wrong_summary_is_failure) ... ok
+test_return_via_temporary_register_is_accepted (__main__.FlowTests.test_return_via_temporary_register_is_accepted) ... ok
+test_return_with_caller_saved_link_register_is_accepted (__main__.FlowTests.test_return_with_caller_saved_link_register_is_accepted) ... ok
+test_saved_machine_code_replay (__main__.FlowTests.test_saved_machine_code_replay) ... ok
+test_source_paths_exist (__main__.FlowTests.test_source_paths_exist) ... ok
+test_sp_clobber_is_rejected (__main__.FlowTests.test_sp_clobber_is_rejected) ... ok
+test_truncated_elf_is_clear_failure (__main__.FlowTests.test_truncated_elf_is_clear_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.645s
+
+OK

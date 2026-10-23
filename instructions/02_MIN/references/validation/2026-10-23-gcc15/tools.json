@@ -1,0 +1,71 @@
+{
+  "riscv_gcc": {
+    "path": "C:\\Users\\kuro\\Downloads\\xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64\\xpack-riscv-none-elf-gcc-15.2.0-1\\bin\\riscv-none-elf-gcc.exe",
+    "exists": true,
+    "exit_code": 0,
+    "stdout": "riscv-none-elf-gcc.exe (xPack GNU RISC-V Embedded GCC x86_64) 15.2.0\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": "",
+    "sha256": "9fd3aecdd6ae127a5545709f44f8f154b4a39898b021fe87d2991947b0a235c5"
+  },
+  "riscv_as": {
+    "path": "C:\\Users\\kuro\\Downloads\\xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64\\xpack-riscv-none-elf-gcc-15.2.0-1\\bin\\riscv-none-elf-as.exe",
+    "exists": true,
+    "exit_code": 0,
+    "stdout": "GNU assembler (xPack GNU RISC-V Embedded GCC x86_64) 2.45\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or later.\nThis program has absolutely no warranty.\nThis assembler was configured for a target of `riscv-none-elf'.\n",
+    "stderr": "",
+    "sha256": "d6d156d52fbf69f31a60f689570fac975a8b800651e6d6d28ea471f0bef91d5a"
+  },
+  "riscv_ld": {
+    "path": "C:\\Users\\kuro\\Downloads\\xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64\\xpack-riscv-none-elf-gcc-15.2.0-1\\bin\\riscv-none-elf-ld.exe",
+    "exists": true,
+    "exit_code": 0,
+    "stdout": "GNU ld (xPack GNU RISC-V Embedded GCC x86_64) 2.45\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) a later version.\nThis program has absolutely no warranty.\n",
+    "stderr": "",
+    "sha256": "a807fd93cb04f577af9b5b7d591990ea740771d778f20311fbc353db2858fe58"
+  },
+  "riscv_objdump": {
+    "path": "C:\\Users\\kuro\\Downloads\\xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64\\xpack-riscv-none-elf-gcc-15.2.0-1\\bin\\riscv-none-elf-objdump.exe",
+    "exists": true,
+    "exit_code": 0,
+    "stdout": "GNU objdump (xPack GNU RISC-V Embedded GCC x86_64) 2.45\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.\n",
+    "stderr": "",
+    "sha256": "307d930a497551a94c7459ac49a947c842c320d28eda485c844a79fce1ce7641"
+  },
+  "host_gcc": {
+    "path": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gcc.exe",
+    "exists": true,
+    "exit_code": 0,
+    "stdout": "gcc.exe (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+    "stderr": "",
+    "sha256": "dead55fc32f7b58f5bea3bfe10f88bd2f51eb3d8e2bf5224785547fcccbe20db"
+  },
+  "clang": {
+    "path": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\clang.exe",
+    "exists": true,
+    "exit_code": 0,
+    "stdout": "(built by Brecht Sanders, r3) clang version 19.1.7\nTarget: x86_64-w64-windows-gnu\nThread model: posix\nInstalledDir: C:/Program Files/CodeBlocks/MinGW/bin\n",
+    "stderr": "",
+    "sha256": "380e6318c68095c1b34c5467a0ec2983686148c066c3b041187d32db0f44f861"
+  },
+  "llvm_objdump": {
+    "path": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\llvm-objdump.exe",
+    "exists": true,
+    "exit_code": 0,
+    "stdout": "LLVM (http://llvm.org/):\n  LLVM version 19.1.7\n  Optimized build.\n\n\n  Registered Targets:\n    aarch64    - AArch64 (little endian)\n    aarch64_32 - AArch64 (little endian ILP32)\n    aarch64_be - AArch64 (big endian)\n    amdgcn     - AMD GCN GPUs\n    arm        - ARM\n    arm64      - ARM64 (little endian)\n    arm64_32   - ARM64 (little endian ILP32)\n    armeb      - ARM (big endian)\n    nvptx      - NVIDIA PTX 32-bit\n    nvptx64    - NVIDIA PTX 64-bit\n    r600       - AMD GPUs HD2XXX-HD6XXX\n    thumb      - Thumb\n    thumbeb    - Thumb (big endian)\n    wasm32     - WebAssembly 32-bit\n    wasm64     - WebAssembly 64-bit\n    x86        - 32-bit X86: Pentium-Pro and above\n    x86-64     - 64-bit X86: EM64T and AMD64\n",
+    "stderr": "",
+    "sha256": "14bd15a4657d62e1b622210b1f9b91d44e17210a8f638684dc3d7e4c1fd9f8de"
+  },
+  "lld": {
+    "path": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\ld.lld.exe",
+    "exists": true,
+    "exit_code": 0,
+    "stdout": "(built by Brecht Sanders, r3) LLD 19.1.7 (compatible with GNU linkers)\n",
+    "stderr": "",
+    "sha256": "ae8f6dfc4db2d80b81a4f84d79fe916e3110ccfb3183e67bb0b94234b6a34e05"
+  },
+  "Ripes": {
+    "path": "C:\\Users\\kuro\\Downloads\\Ripes-v2.2.6-win-x86_64\\Ripes.exe",
+    "exists": true,
+    "execution": "not run; no new simulator harness created"
+  }
+}
