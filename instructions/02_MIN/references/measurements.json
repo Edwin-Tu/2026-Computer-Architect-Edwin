@@ -1,0 +1,86 @@
+{
+  "test_vectors": 5199,
+  "cp1_vectors": 14,
+  "generated_grid": 1089,
+  "generated_random": 4096,
+  "random_seed": 20261018,
+  "routines": {
+    "min_s32": {
+      "static": {
+        "instructions": 4,
+        "conditional_branches": 1,
+        "jal_or_jalr": 1,
+        "address": 65536,
+        "size_bytes": 16
+      },
+      "dynamic_cp1_14": {
+        "instructions": 46,
+        "conditional_branches": 14,
+        "taken": 10,
+        "control_transfers": 14
+      },
+      "dynamic_all": {
+        "instructions": 18184,
+        "conditional_branches": 5199,
+        "taken": 2612,
+        "control_transfers": 5199
+      },
+      "min_dynamic_per_call": 3,
+      "max_dynamic_per_call": 4,
+      "all_passed": true
+    },
+    "min_branch": {
+      "static": {
+        "instructions": 3,
+        "conditional_branches": 1,
+        "jal_or_jalr": 1,
+        "address": 65552,
+        "size_bytes": 12
+      },
+      "dynamic_cp1_14": {
+        "instructions": 38,
+        "conditional_branches": 14,
+        "taken": 4,
+        "control_transfers": 14
+      },
+      "dynamic_all": {
+        "instructions": 13010,
+        "conditional_branches": 5199,
+        "taken": 2587,
+        "control_transfers": 5199
+      },
+      "min_dynamic_per_call": 2,
+      "max_dynamic_per_call": 3,
+      "all_passed": true
+    },
+    "min_branchless": {
+      "static": {
+        "instructions": 6,
+        "conditional_branches": 0,
+        "jal_or_jalr": 1,
+        "address": 65564,
+        "size_bytes": 24
+      },
+      "dynamic_cp1_14": {
+        "instructions": 84,
+        "conditional_branches": 0,
+        "taken": 0,
+        "control_transfers": 14
+      },
+      "dynamic_all": {
+        "instructions": 31194,
+        "conditional_branches": 0,
+        "taken": 0,
+        "control_transfers": 5199
+      },
+      "min_dynamic_per_call": 6,
+      "max_dynamic_per_call": 6,
+      "all_passed": true
+    }
+  },
+  "native_test": "14/14 native C tests passed",
+  "compiler": "riscv64-elf-gcc",
+  "compiler_version": "riscv64-elf-gcc (GCC) 16.2.0",
+  "compile_command": "riscv64-elf-gcc -march=rv32im -mabi=ilp32 -O2 -ffreestanding -fno-builtin -fno-pic -fno-pie -nostdlib -Wl,-e,min_branch -Wl,-Ttext=0x10000 -Wl,--no-relax -o /Users/liuxingyuan/Desktop/CP2_RECORD_20261018_131340/build/min_rv32im.elf /Users/liuxingyuan/Desktop/CP2_RECORD_20261018_131340/src/c_baseline/min.c /Users/liuxingyuan/Desktop/CP2_RECORD_20261018_131340/src/rv32im/min_branch.S /Users/liuxingyuan/Desktop/CP2_RECORD_20261018_131340/src/rv32im/min_branchless.S",
+  "method": "ELF32 machine-code interpreter v1.0, RV32I subset"
+}
