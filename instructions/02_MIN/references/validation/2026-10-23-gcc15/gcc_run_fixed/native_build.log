@@ -1,0 +1,5 @@
+["C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gcc.exe", "-std=c11", "-O2", "-Wall", "-Wextra", "-Wpedantic", "-Werror", "-I", "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\project\\instructions\\02_MIN\\c_baseline", "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\project\\instructions\\02_MIN\\c_baseline\\min.c", "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\project\\instructions\\02_MIN\\tests\\test_min.c", "-o", "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\source_rebuild_20261023_144721_3b660d\\gcc_run_fixed\\native_test_min.exe"]
+exit_code=0
+STDOUT:
+
+STDERR:
