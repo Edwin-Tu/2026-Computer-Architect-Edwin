@@ -1,0 +1,24 @@
+
+C:\Users\kuro\AppData\Local\Temp\MIN_CP2_review_20261023_141302_33ae77\source_rebuild_20261023_144721_3b660d\gcc_run_fixed\min_rv32im.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010000 <min_s32>:
+   10000:	00b55463          	bge	a0,a1,10008 <min_s32+0x8>
+   10004:	00050593          	addi	a1,a0,0
+   10008:	00058513          	addi	a0,a1,0
+   1000c:	00008067          	jalr	zero,0(ra)
+
+00010010 <min_branch>:
+   10010:	00b54463          	blt	a0,a1,10018 <min_branch+0x8>
+   10014:	00058513          	addi	a0,a1,0
+   10018:	00008067          	jalr	zero,0(ra)
+
+0001001c <min_branchless>:
+   1001c:	00b522b3          	slt	t0,a0,a1
+   10020:	405002b3          	sub	t0,zero,t0
+   10024:	00b54333          	xor	t1,a0,a1
+   10028:	00537333          	and	t1,t1,t0
+   1002c:	0065c533          	xor	a0,a1,t1
+   10030:	00008067          	jalr	zero,0(ra)

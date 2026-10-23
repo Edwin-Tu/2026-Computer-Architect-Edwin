@@ -1,0 +1,25 @@
+{
+  "new_tool": "riscv-none-elf-gcc.exe (xPack GNU RISC-V Embedded GCC x86_64) 15.2.0",
+  "historical_tool": "riscv64-elf-gcc (GCC) 16.2.0",
+  "machine_words_and_addresses_identical": true,
+  "all_machine_words": {
+    "0x10000": "0xb55463",
+    "0x10004": "0x50593",
+    "0x10008": "0x58513",
+    "0x1000c": "0x8067",
+    "0x10010": "0xb54463",
+    "0x10014": "0x58513",
+    "0x10018": "0x8067",
+    "0x1001c": "0xb522b3",
+    "0x10020": "0x405002b3",
+    "0x10024": "0xb54333",
+    "0x10028": "0x537333",
+    "0x1002c": "0x65c533",
+    "0x10030": "0x8067"
+  },
+  "historical_routine_metrics_identical": true,
+  "test_vector_counts_identical": true,
+  "ELF_sha256": "7827f8df3a7760bf23d0daa2e2dba18405aba822b805a89af615b9beedfed6f9",
+  "historical_ELF": "not submitted; cannot compare entire ELF",
+  "explanation": "GCC versions differ (15.2.0 vs historical16.2.0), but all13 function instructions, addresses and measured metrics match. Full text header paths differ."
+}

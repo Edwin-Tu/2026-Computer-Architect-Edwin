@@ -1,0 +1,16 @@
+[PASS]  1 teacher example: mixed signs    min(3, -2) = -2, expected -2
+[PASS]  2 teacher example: equal positive min(5, 5) = 5, expected 5
+[PASS]  3 ascending positive              min(10, 20) = 10, expected 10
+[PASS]  4 descending positive             min(20, 10) = 10, expected 10
+[PASS]  5 two negative values             min(-10, -20) = -20, expected -20
+[PASS]  6 both zero                       min(0, 0) = 0, expected 0
+[PASS]  7 zero and negative               min(0, -1) = -1, expected -1
+[PASS]  8 zero and positive               min(0, 100) = 0, expected 0
+[PASS]  9 symmetric signs                 min(-100, 100) = -100, expected -100
+[PASS] 10 full signed range               min(2147483647, -2147483648) = -2147483648, expected -2147483648
+[PASS] 11 minimum and zero                min(-2147483648, 0) = -2147483648, expected -2147483648
+[PASS] 12 maximum and zero                min(2147483647, 0) = 0, expected 0
+[PASS] 13 equal minimum                   min(-2147483648, -2147483648) = -2147483648, expected -2147483648
+[PASS] 14 equal maximum                   min(2147483647, 2147483647) = 2147483647, expected 2147483647
+
+Result: 14/14 tests passed.

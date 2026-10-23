@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "created_utc": "2026-10-23T06:48:15.154031+00:00",
+  "source_version": "main@e084ba0-core-unchanged_cp2-validator-v1.2.1",
+  "python": "3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "argv": [
+    "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\project\\instructions\\02_MIN\\tests\\check_cp2.py",
+    "--compiler",
+    "C:\\Users\\kuro\\Downloads\\xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64\\xpack-riscv-none-elf-gcc-15.2.0-1\\bin\\riscv-none-elf-gcc.exe",
+    "--host-compiler",
+    "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gcc.exe",
+    "--output-dir",
+    "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\source_rebuild_20261023_144721_3b660d\\gcc_run_fixed",
+    "--source-version",
+    "main@e084ba0-core-unchanged_cp2-validator-v1.2.1"
+  ],
+  "root": "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\project\\instructions\\02_MIN",
+  "output": "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\source_rebuild_20261023_144721_3b660d\\gcc_run_fixed",
+  "native_test": "14/14 native C tests passed",
+  "rv32_test": "5199/5199 per function passed (interpreter, not cycles)",
+  "source_sha256": {
+    "c_baseline/min.c": "76ef36c2d5ffc6e68f8949949b73185a3092fee33a1b09a26aa8bae8ddf42d8a",
+    "c_baseline/min.h": "92fcf8b979cf53860a8f7c52c843128ddcebf8339baad80f9a61b54fb8929745",
+    "tests/test_min.c": "9fc40c8c5e98db86fbb5cd5414a66b9ad1088451ba3bd9af0009e2606894799c",
+    "rv32im/min_branch.S": "af90a6f125d19bb95c3fd042c5f3613f1b9322f33669170271ad75165a8238a8",
+    "rv32im/min_branchless.S": "8bdc5e5a101bd9625d455905886b9b5a1d64c16000082ba7c286af5201c963c4",
+    "tests/check_cp2.py": "f92631520f11107eed313bd5041484b6695a33cc0f0c3ce14075114cb0466b29"
+  }
+}

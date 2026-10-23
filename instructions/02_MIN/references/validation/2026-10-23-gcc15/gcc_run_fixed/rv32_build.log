@@ -1,0 +1,5 @@
+["C:\\Users\\kuro\\Downloads\\xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64\\xpack-riscv-none-elf-gcc-15.2.0-1\\bin\\riscv-none-elf-gcc.exe", "-march=rv32im", "-mabi=ilp32", "-O2", "-ffreestanding", "-fno-builtin", "-fno-pic", "-fno-pie", "-nostdlib", "-Wl,-e,min_branch", "-Wl,-Ttext=0x10000", "-Wl,--no-relax", "-o", "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\source_rebuild_20261023_144721_3b660d\\gcc_run_fixed\\min_rv32im.elf", "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\project\\instructions\\02_MIN\\c_baseline\\min.c", "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\project\\instructions\\02_MIN\\rv32im\\min_branch.S", "C:\\Users\\kuro\\AppData\\Local\\Temp\\MIN_CP2_review_20261023_141302_33ae77\\project\\instructions\\02_MIN\\rv32im\\min_branchless.S"]
+exit_code=0
+STDOUT:
+
+STDERR:
