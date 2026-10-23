@@ -180,10 +180,4 @@ dev來源的min_s32.S以有號blt選取較小值，靜態3條，依原14筆輸�
 
 在保存測資及編譯器輸出下，main Branch的動態指令數少於C baseline與Branchless；這只能支持指令數比較，不能證明CPU執行時間或週期加速。Ripes、Spike、QEMU、真實硬體及CPU cycles量測尚未進行。
 
-## 8. AI使用揭露
-
-- dev@07736e2原報告記載Codex曾協助規格整理、Assembly初版、分支路徑推導與GNU工具鏈操作。本報告保留此歷史揭露，不將該核心開發歸屬於文件整理者。
-- main@e084ba0原報告記載ChatGPT曾協助Assembly／Python初稿、反組譯分析及報告整理；[歷史原文](../references/validation/2026-10-23-gcc15/historical_main_CP2.txt)保存於證據包。這是原報告自述，不推定每位組員的使用工具或會話內容。
-- 林佳宏以Codex協助CP2文件整理、README、連結、證據索引及報告一致性檢查。驗證證據包含自動工具執行紀錄，工具輸出與功能測試的範圍依第6節說明；不將其他組員的核心實作或重新建置歸屬於林佳宏。
-
-四位組員的分工與比例見[貢獻聲明](../CONTRIBUTIONS.md)。
+四位組員的分工與比例見[貢獻聲明](./CP2_CONTRIBUTIONS.md)。

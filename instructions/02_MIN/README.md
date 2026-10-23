@@ -15,7 +15,7 @@
 ## 專題與分工
 
 - 題目目錄：`02_MIN`。
-- [CP2分工與貢獻比例](CONTRIBUTIONS.md)。
+- [CP2分工與貢獻比例](./report/CP2_CONTRIBUTIONS.md)。
 - 整合基底：`3e169d5`（包含main `e084ba0`與dev既有成果）。
 - dev原min_s32來源：`07736e2`；main驗證來源：`e084ba0`。
 
