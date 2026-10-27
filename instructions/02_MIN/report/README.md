@@ -4,6 +4,7 @@
 
 - [CP1 — C baseline](CP1.md)
 - [CP2 — RV32IM 實作與指令統計](CP2.md)
+- [CP3 — MIN 自訂指令規格與編碼](CP3.md)（含 2026-10-27 分配的 funct 欄位值）
 
 - [CP2實驗指南](CP2_MIN_執行指令與實驗紀錄.md)：不覆寫歷史結果的重現步驟。
 - [CP2證據索引](../references/README.md)：歷史、新ELF及流程回歸分列。
