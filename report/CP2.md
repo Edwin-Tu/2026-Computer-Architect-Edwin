@@ -132,7 +132,7 @@ min_s32:
 
 ### 路徑與證據
 
-課程規範 [HOMEWORK.md §5.4](../HOMEWORK.md) 提到 `src/rv32im/`，但目前倉庫把各題內容依題目放在 `instructions/<題目>/`，因此本題程式與建置輸出位於 `src/rv32im/`。本報告和Makefile均使用此實際路徑。
+課程規範 [HOMEWORK.md §5.4](../HOMEWORK.md) 指定 `src/rv32im/`。本分支已將 MIN 程式從舊 `instructions/02_MIN/rv32im/` 搬至此位置，正式報告位於根目錄 `report/`。本報告的現行路徑與 Makefile 以目前目錄為準；下段舊命令只保留作歷史執行紀錄，不能作為目前重現命令。
 
 07736e2既有報告記錄重建指令 `make -C instructions/02_MIN/rv32im clean all` 執行成功。其記載的環境版本為 `riscv64-elf-gcc (GCC) 16.2.0`、`GNU objdump (GNU Binutils) 2.47.20260726`。產生的 `min_s32.o` 為 `elf32-littleriscv` 物件檔；`min_s32.disasm.txt` 顯示機器指令依序為 `blt`、`addi`、`jalr`，與靜態指令數 3 相符。動態指令數 38 仍是依 CP1 測資及控制流程推算，沒有使用模擬器量測整個測試程式的 retired-instruction 數。
 

@@ -2,7 +2,7 @@
 
 ## CP3 交付結構與完整性檢查
 
-從專案根目錄執行 `python -B src/tests/check_cp3_delivery.py`，檢查扁平指令目錄、每個目錄 README、報告位置、檔案與章節連結、證據完整性及目前本機分支。此檢查不替代個人理解、全組貢獻確認或 GitHub 信箱關聯。
+從專案根目錄執行 `python -B src/tests/check_cp3_delivery.py`，只檢查 MIN 正式交付範圍的扁平指令目錄、目錄 README、報告位置、檔案與章節連結及證據完整性；保留的課程模板不要求符合 MIN 結構，也不限制 Git 分支名稱。此檢查不替代個人理解、全組貢獻確認或 GitHub 信箱關聯。
 
 ## CP3 工作二：語意與文件一致性檢查
 
@@ -10,7 +10,7 @@
 
 此目錄包含 CP1 C baseline 測試程式 [test_min.c](test_min.c)，以表格逐筆列出輸入與預期結果，共 14 組，符合至少 10 組測資的要求，並涵蓋 `INT32_MIN`、`INT32_MAX` 邊界值。
 
-從專案根目錄執行 `make -C instructions/02_MIN/c_baseline test`，即可逐筆比對實際結果與預期值。測試結果與分析見 [CP1 報告](../../report/CP1.md)。
+從專案根目錄執行 `make -C src/c_baseline test`，即可逐筆比對實際結果與預期值。測試結果與分析，以及 Windows PowerShell 的 MinGW 指令寫法，見 [CP1 報告](../../report/CP1.md#3-結果與分析)。
 
 
 ## CP2已保存的來源重建驗證

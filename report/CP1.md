@@ -50,8 +50,15 @@ return (rs1 < rs2) ? rs1 : rs2;
 從專案根目錄執行下列指令：
 
 ```bash
-make -C instructions/02_MIN/c_baseline test
+make -C src/c_baseline test
 ```
+
+Windows PowerShell 若使用 Code::Blocks 隨附的 MinGW 工具，可從專案根目錄執行以下寫法（工具安裝位置不同時請替換路徑）：
+
+```powershell
+& 'C:\Program Files\CodeBlocks\MinGW\bin\mingw32-make.exe' -C src/c_baseline 'CC="C:/Program Files/CodeBlocks/MinGW/bin/gcc.exe"' test
+```
+
 
 | # | rs1 | rs2 | 預期 rd | 覆蓋目的 |
 |---:|---:|---:|---:|---|

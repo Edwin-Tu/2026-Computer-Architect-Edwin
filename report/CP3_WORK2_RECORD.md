@@ -116,3 +116,30 @@ python -B src/tests/check_cp3_delivery.py
 | `81826bc` | `ccd6948` |
 
 本紀錄的作者資訊修訂另外提交，使用相同的新 author。交接時套用重製後的補丁，組長保留獨立 commit；不要再使用舊作者版本。修改作者身分不等於宣稱本人獨立產出 AI 文字，AI 揭露及既有測試結論不變。未 push、建立 PR 或提交老師端。
+
+
+## 正式 main 基底移植與後續相容性修正（2026-10-28）
+
+本節是後續事件補記；前文的 ZIP 倉庫、舊分支、未設定 Remote 與當時驗證數量保留為歷史階段，不代表目前 Clone 狀態。
+
+- 正式工作倉庫為 `team_repo_review`，origin 指向小組 `Edwin-Tu/2026-Computer-Architect-Edwin`。本機 main 與保存的 origin/main 為 `bd12eb00df4bf4c373ce101276764c9d2f35c1ca`；其檔案樹與 ZIP 匯入基底 `08ef11f` 完全一致，但歷史不同。
+- 從正式 origin/main 建立 `dev/1114405029-work2`，依序使用 `git am --keep-cr` 移植六份補丁；沒有帶入 ZIP 匯入 Commit，沒有改寫小組舊歷史。
+
+| ZIP 基底上的原提交 | 正式基底上的移植提交 |
+|---|---|
+| `90fd353` | `223f5960eb878e3847bc10f3c8de5b30605de371` |
+| `16a89ff` | `8848b46384c0783650f5ac319b15730d4c862576` |
+| `fb98a98` | `dc6d0464c54a41516ae7a427fa5ceb1df7148477` |
+| `fd0fb9d` | `7ec0a604992cb77e761cb680efbc493e70bbc93f` |
+| `ccd6948` | `f80122dd22211d5de6c7b30e0519de27484c670e` |
+| `915d29c` | `aee5dc1f25d8cd9945411d89effbbdf3dd650e83` |
+
+六筆作者、作者日期、訊息及各步檔案樹均核對一致；重新套用所產生的 Commit SHA 與 CommitDate 不同。第六筆移植後 tree 為 `e856ac11e1ffccb948f5d1a9bbc709ac0fabbf9d`，與原始 `915d29c` 相同。
+
+第七筆 `8a4e450f3be92508a880fbb76c62b2f309ab4fda` 恢復 108 個其他題目模板與 136 個 MAC 示範檔案，共 244 個，與正式 main 及老師上游祖先 `dc3200d` 完全一致；另修正導覽及 MIN 交付檢查範圍，總計 248 個檔案。保留 `instructions/MIN/`、`src/`、`report/`，沒有恢復第二套正式 MIN。既有證據位元組與雜湊清單未修改。
+
+目前分支仍是 `dev/1114405029-work2`；本次文件修正前 HEAD 為上述第七筆。此名稱是交接分支，與教師 `dev/<學號>` 字面格式不同，正式分支處理及全組繳交仍待確認。沒有將組員 `5d3526a` 的 CP3 草稿併入，也沒有將本機追蹤分支當成最新遠端查詢結果；上傳狀態須另行查證。本次未 Push、未建立 PR、未合併 main 或建立繳交 tag。
+
+本次修復 CP1 現行測試命令、測試 README 的路徑及檢查範圍、CP2 目前目錄描述；明確的歷史命令保留。CP3 報告只整理已有證據的 5 Whys 與 AI 協助紀錄；本人理解、親身困難與本人實際改寫仍待本人補述。
+
+本機以 Code::Blocks 的 GCC 及 mingw32-make 真正重編譯並執行目前 C baseline，原 14 組測資全部通過；此次產生的測試執行檔驗證後清除。這是本次主機 C 測試，不是 RISC-V 建置、自訂 opcode 執行或週期量測，也不改寫先前保存的證據結果。
