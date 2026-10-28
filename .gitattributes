@@ -1,10 +1,10 @@
 # Preserve the exact bytes of this dated CP2 evidence package only.
 # Raw evidence is binary for diff/check; SHA-256 manifests provide its audit.
-/instructions/02_MIN/references/validation/2026-10-23-gcc15/** -text -diff
-/instructions/02_MIN/report/CP1_CONTRIBUTIONS_07736e2.txt -text -diff
+/src/references/validation/2026-10-23-gcc15/** -text -diff
+/report/CP1_CONTRIBUTIONS_07736e2.txt -text -diff
 
 # Authored package documentation/indices remain text-diff and whitespace checked.
 # Accept their existing CRLF; still reject trailing spaces and blank EOF lines.
-/instructions/02_MIN/references/validation/2026-10-23-gcc15/README.md -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-/instructions/02_MIN/references/validation/2026-10-23-gcc15/package_sha256.json -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-/instructions/02_MIN/references/validation/2026-10-23-gcc15/provenance_manifest.json -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/src/references/validation/2026-10-23-gcc15/README.md -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/src/references/validation/2026-10-23-gcc15/package_sha256.json -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/src/references/validation/2026-10-23-gcc15/provenance_manifest.json -text diff whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

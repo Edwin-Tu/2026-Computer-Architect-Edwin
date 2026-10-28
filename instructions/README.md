@@ -1,15 +1,5 @@
-# instructions/
+# 指令索引
 
-本目錄為學生可選的 19 條指令,每條一個子目錄(以序號加指令名稱命名,例如 `01_ABS`),依 HOMEWORK.md 第六節的語意規格建立目錄結構。
+本組唯一題目為 [MIN](MIN/README.md)：對兩個 32-bit 二補數有號整數比較並回傳較小值。
 
-| 類別 | 指令 |
-|---|---|
-| 基礎運算 | `01_ABS`、`02_MIN`、`03_AVG`、`04_CLAMP`、`05_ABSDIFF`、`06_THRESHOLD`、`07_MAXPIX` |
-| AI / 視覺 | `08_ReLU6`、`09_Leaky_ReLU`、`10_CLIP`、`11_POPCOUNT`、`12_SAD` |
-| 網路 | `13_NETMASK`、`14_CSUM16` |
-| 密碼學 | `15_ROTL` |
-| DSP | `16_ADDSAT`、`17_BITREV` |
-| 字串 | `18_FINDZERO` |
-| 算術 | `19_CLZ` |
-
-示範題 `MAC`(見 `mac_demo/`)與 `TOP2_4` 不列入學生目錄。
+每個指令目錄只放 README，實作與驗證資料見 [src 索引](../src/README.md)，報告見[報告索引](../report/README.md)。其他題目不屬於本次交付。
