@@ -26,7 +26,7 @@
 | [語意檢查程式](../instructions/02_MIN/tests/check_cp3_semantics.py) | 讀取原 C 測資，對照保存 Branch ELF、語意模型及暫存器寫回 |
 | [報告索引](README.md) | 新增工作二報告與本紀錄的入口 |
 
-原有 C、Assembly、CP1／CP2 報告、測資、保存 ELF 及其證據包均不修改。本次不處理既有證據包 README 的雜湊不一致，也不把它算入工作二成果。不加入先前聊天的額外加速探索、替代 baseline 最佳化或週期數。
+原有 C、Assembly、歷史報告、測資、保存的 baseline ELF 及其證據包均不修改。本次只處理 CP3 工作二；提供的歷史審查意見僅用來檢查相同問題是否出現在目前交付內容，不代表本次修改歷史作業。本次不處理既有證據包 README 的雜湊不一致，也不把它算入工作二成果。不加入先前聊天的額外加速探索、替代 baseline 最佳化或週期數。
 
 ## 驗證方式與結果（目前 v1.1）
 
@@ -45,7 +45,7 @@ Original C table + preserved branch ELF + custom semantic model: 14/14 PASS
 Baseline: static core/function = 2/3; dynamic core/function = 24/38; taken = 4/14
 Preserved branch ELF boundary grid: 49/49 PASS
 Custom semantic model boundary/writeback checks: 343/343 PASS
-Python: 3.11.4; semantic checker v1.1; CP2 subset interpreter v1.0
+Python: 3.11.4; semantic checker v1.1; baseline RV32I subset interpreter v1.0
 No native compilation, custom-opcode execution, cycles or speedup measured.
 ```
 
@@ -66,7 +66,9 @@ No native compilation, custom-opcode execution, cycles or speedup measured.
 3. 將檢查程式升為 v1.1，新增文件表格、目前來源對照與保存 ELF 指令形狀檢查；寫回測試使用獨立的有號解讀方法核對模型。
 4. 更新 MIN 首頁、報告及測試入口，讓組員能直接找到工作二內容與重現命令。
 
-本輪另檢查六份修改文件中的 43 個本機檔案／章節連結，均通過；白話說明為 92 字元，未超過 200 字。逐位元組比對提供的 main ZIP，確認舊核心、14 組測資、CP1／CP2 報告及歷史證據未修改。
+本輪另檢查六份修改文件中的 43 個本機檔案／章節連結，均通過；白話說明為 92 字元，未超過 200 字。逐位元組比對提供的 main ZIP，確認舊核心、14 組測資、歷史報告及保存的 baseline 證據未修改。
+
+後續範圍核對：本次修改的對象是 CP3 工作二，不是歷史報告修訂。CP3 文件中的來源說明以具體 baseline、測資與 ELF 表示；工具檔名 `check_cp2.py` 僅為實際載入的既有直譯器檔案名稱，不代表本次交付其他 Checkpoint。
 
 上述記錄代表使用者提出要求、AI 實際編輯與驗證的協作過程；不將其替換成未發生的「本人已獨立完成」聲明。課程要求個人理解，文件及測試不能單獨證明這件事。
 

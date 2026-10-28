@@ -1,6 +1,6 @@
 """CP3 work 2 semantics check v1.1; no compilation or cycle simulation.
 
-Executes the preserved CP2 ELF with the existing RV32I subset interpreter.
+Executes the preserved baseline ELF with the existing RV32I subset interpreter.
 Custom MIN is a Python semantic model, not an executed custom instruction.
 """
 
@@ -73,9 +73,9 @@ def main():
     check(len(cases) == 14, "Expected the original 14 C test vectors")
     check_document_tables(cases)
 
-    spec = importlib.util.spec_from_file_location("cp2_semantics_baseline", ROOT / "tests/check_cp2.py")
-    cp2 = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(cp2)
+    spec = importlib.util.spec_from_file_location("rv32i_semantics_baseline", ROOT / "tests/check_cp2.py")
+    baseline = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(baseline)
     evidence = ROOT / "references/validation/2026-10-23-gcc15/gcc_run_fixed"
     snapshot = evidence.parent / "source_snapshot"
     for relative in ("rv32im/min_branch.S", "c_baseline/min.c", "tests/test_min.c"):
@@ -86,7 +86,7 @@ def main():
     metadata = json.loads((evidence / "measurements.json").read_text(encoding="utf-8-sig"))
     check(hashlib.sha256(binary.read_bytes()).hexdigest() == metadata["binary_sha256"],
           "Preserved ELF hash does not match its evidence")
-    elf = cp2.ELF32(binary)
+    elf = baseline.ELF32(binary)
     start, size = elf.symbols["min_branch"]
     check(size == 12, "Expected three RV32I instructions in min_branch")
     codes = [elf.read_u32(start + offset) for offset in (0, 4, 8)]
@@ -99,7 +99,7 @@ def main():
     taken = 0
     for a, b, expected in cases:
         check(expected == min(a, b), f"Incorrect original expectation: {(a, b)}")
-        result = cp2.run_function(elf, "min_branch", a, b)
+        result = baseline.run_function(elf, "min_branch", a, b)
         check(result["result"] == expected, f"Baseline mismatch: {(a, b)}")
         regs = [0] * 32
         regs[10], regs[11] = a & MASK, b & MASK
@@ -116,8 +116,8 @@ def main():
                       (0, 10, 11), (12, 0, 11), (12, 10, 0), (12, 0, 0)]
     checks = 0
     for a, b in itertools.product(edges, repeat=2):
-        baseline = cp2.run_function(elf, "min_branch", a, b)
-        check(baseline["result"] == min(a, b), f"Boundary baseline mismatch: {(a, b)}")
+        trace = baseline.run_function(elf, "min_branch", a, b)
+        check(trace["result"] == min(a, b), f"Boundary baseline mismatch: {(a, b)}")
         for rd, rs1, rs2 in configurations:
             regs = [0] * 32
             regs[10], regs[11] = a & MASK, b & MASK
@@ -133,7 +133,7 @@ def main():
             checks += 1
     print("Preserved branch ELF boundary grid: 49/49 PASS")
     print(f"Custom semantic model boundary/writeback checks: {checks}/{checks} PASS")
-    print(f"Python: {sys.version.split()[0]}; semantic checker v1.1; CP2 subset interpreter v1.0")
+    print(f"Python: {sys.version.split()[0]}; semantic checker v1.1; baseline RV32I subset interpreter v1.0")
     print("No native compilation, custom-opcode execution, cycles or speedup measured.")
 
 
