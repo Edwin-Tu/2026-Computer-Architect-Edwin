@@ -97,11 +97,16 @@ CP2_RUN
 
 `set -C` 避免 shell 重導向覆寫既有反組譯；Python輸出與ZIP用exclusive模式。`--output-dir`必須不存在，腳本才建立它。失敗時留下的run僅供診斷，下次換全新目錄，不刪改失敗紀錄後假裝是同次成功。反組譯或封存失敗表示完整證據流程尚未完成，即使先前run_status已記錄功能測試通過也不能宣稱封存完成。
 
-Windows可用以下PowerShell命令，變數必須使用當前主機的實際路徑。這是需設定前提的操作範例，不是聲稱已執行的紀錄；已成功的原始argv及結果見證據索引。完整反組譯與封存另需相符GNU工具。
+Windows可用以下PowerShell命令（從專案根目錄執行），變數必須使用當前主機的實際路徑。這是需設定前提的操作範例，不是聲稱已執行的紀錄；已成功的原始argv及結果見證據索引。完整反組譯與封存另需相符GNU工具。
 
 ```powershell
 # 先將這三個變數設為實際工具路徑及不存在的新輸出目錄。
 if (-not $RvCompiler -or -not $HostCompiler -or -not $NewRun) { throw '未設定工具或新輸出目錄' }
+foreach ($tool in @($RvCompiler, $HostCompiler)) {
+  if (-not (Test-Path -LiteralPath $tool -PathType Leaf)) { throw "工具不存在：$tool" }
+}
+python -B -c "import pathlib,sys; out,root=map(lambda p:pathlib.Path(p).resolve(),sys.argv[1:]); sys.exit('輸出須為倉庫外全新路徑' if out.exists() or out==root or root in out.parents else 0)" "$NewRun" "$PWD"
+if ($LASTEXITCODE -ne 0) { throw '輸出位置檢查失敗' }
 python -B src/references/validation/2026-10-23-gcc15/source_snapshot/tests/check_cp2.py `
   --compiler "$RvCompiler" --host-compiler "$HostCompiler" `
   --source-version main@e084ba0-core-unchanged_cp2-validator-v1.2.1 --output-dir "$NewRun"
@@ -187,7 +192,7 @@ Clang driver另加 `--target=riscv32-unknown-elf -fuse-ld=lld`。`rv32_build.log
 
 ### 額外49組的新run核對範例
 
-以下只讀指定的新ELF並新建結果JSON；環境變數必須先設定為本次新產物與不存在的結果檔。它不覆寫保存結果，也不包含在預設5,199筆入口內：
+以下 Python 區塊應使用 `python -B` 執行（不要直接貼入 shell）；只讀指定的新ELF並新建結果JSON；環境變數必須先設定為本次新產物與不存在的結果檔。它不覆寫保存結果，也不包含在預設5,199筆入口內：
 
 ```python
 import datetime, hashlib, importlib.util, itertools, json, os
@@ -247,6 +252,12 @@ set -C
 : "${DEV_RUN:?未設定全新輸出目錄}"
 : "${RV_CC:?未設定RISC-V編譯器}"
 : "${RV_OBJDUMP:?未設定RISC-V objdump}"
+python3 - "$DEV_RUN" "$PROJECT_ROOT" <<'CHECK_DEV_OUTPUT'
+import pathlib, sys
+output, project = (pathlib.Path(x).resolve() for x in sys.argv[1:])
+if output == project or project in output.parents:
+    raise SystemExit('輸出須在專案倉庫外，避免改動保存來源與產物')
+CHECK_DEV_OUTPUT
 if [ -e "$DEV_RUN" ]; then
   printf '拒絕覆寫既有目錄：%s\n' "$DEV_RUN" >&2
   exit 1
@@ -257,4 +268,26 @@ mkdir "$DEV_RUN"
 DEV_BUILD
 ```
 
-這是獨立重建操作方法，不宣稱在文件定稿階段重新執行。dev物件檔僅含該Assembly，沒有直接執行測試框架；靜態3條與原14筆38條路徑推算，不等於main來源5,199／49筆驗證。
+以上是 Linux/macOS Bash 操作範例；本次 Windows 驗證另使用下方 PowerShell 入口。dev物件檔僅含該Assembly，沒有直接執行測試框架；靜態3條與原14筆38條路徑推算，不等於main來源5,199／49筆驗證。
+
+
+### Windows PowerShell：dev來源獨立組譯
+
+從專案根目錄執行；先設定 `$RvCompiler`、`$RvObjdump` 為當前工具的完整檔案路徑，`$NewDevRun` 為倉庫外不存在的新目錄。物件及反組譯只寫入該目錄，不動保存產物。
+
+```powershell
+if (-not $RvCompiler -or -not $RvObjdump -or -not $NewDevRun) { throw '未設定工具或新輸出目錄' }
+foreach ($tool in @($RvCompiler, $RvObjdump)) {
+  if (-not (Test-Path -LiteralPath $tool -PathType Leaf)) { throw "工具不存在：$tool" }
+}
+python -B -c "import pathlib,sys; out,root=map(lambda p:pathlib.Path(p).resolve(),sys.argv[1:]); sys.exit('輸出須為倉庫外全新路徑' if out.exists() or out==root or root in out.parents else 0)" "$NewDevRun" "$PWD"
+if ($LASTEXITCODE -ne 0) { throw '輸出位置檢查失敗' }
+New-Item -ItemType Directory -Path $NewDevRun -ErrorAction Stop | Out-Null
+& $RvCompiler -march=rv32im -mabi=ilp32 -c src/rv32im/min_s32.S -o (Join-Path $NewDevRun 'min_s32.o')
+if ($LASTEXITCODE -ne 0) { throw 'dev組譯失敗' }
+$disassembly = & $RvObjdump -d -M no-aliases (Join-Path $NewDevRun 'min_s32.o')
+if ($LASTEXITCODE -ne 0) { throw 'dev反組譯失敗' }
+$disassembly | Set-Content -LiteralPath (Join-Path $NewDevRun 'min_s32.disasm.txt') -Encoding UTF8
+```
+
+Linux/macOS Bash 與 Windows PowerShell 是替代入口，不應在同一個已存在的輸出目錄接續重跑。工具版本與當次輸出須另存，不覆蓋歷史 log、ELF 或 SHA 清單。上方 `<MIN>`／`<RUN>` 的 `text` 區塊只說明編譯命令結構，不是可直接貼上的 shell 指令。

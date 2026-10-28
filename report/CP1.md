@@ -53,12 +53,21 @@ return (rs1 < rs2) ? rs1 : rs2;
 make -C src/c_baseline test
 ```
 
+Linux/macOS 指令使用 `make` 與主機 C 編譯器。
+
 Windows PowerShell 若使用 Code::Blocks 隨附的 MinGW 工具，可從專案根目錄執行以下寫法（工具安裝位置不同時請替換路徑）：
 
 ```powershell
-& 'C:\Program Files\CodeBlocks\MinGW\bin\mingw32-make.exe' -C src/c_baseline 'CC="C:/Program Files/CodeBlocks/MinGW/bin/gcc.exe"' test
+& 'C:\Program Files\CodeBlocks\MinGW\bin\mingw32-make.exe' -C src/c_baseline 'CC="C:/Program Files/CodeBlocks/MinGW/bin/gcc.exe"' TARGET=test_min.exe test
 ```
 
+Windows 明確指定 `TARGET=test_min.exe`，讓清理目標與實際執行檔一致。以下使用原生 PowerShell 清理該建置目標，不依賴 Unix rm：
+
+```powershell
+& 'C:\Program Files\CodeBlocks\MinGW\bin\mingw32-make.exe' -C src/c_baseline TARGET=test_min.exe 'RM=powershell -NoProfile -Command Remove-Item -LiteralPath' clean
+```
+
+驗收時在倉庫外暫存副本執行 test／clean，不提交執行檔。
 
 | # | rs1 | rs2 | 預期 rd | 覆蓋目的 |
 |---:|---:|---:|---:|---|
@@ -86,3 +95,9 @@ Windows PowerShell 若使用 Code::Blocks 隨附的 MinGW 工具，可從專案�
 ## 5. 白話說明
 
 MIN 就像把兩個數字放在一起比大小，留下較小的那一個。這次先用 C 程式做出可信任的標準答案，之後寫 RISC-V 組合語言或自訂指令時，都能拿相同測資來核對。重點不只在一般正數，也要確認負數、兩數相等、零，以及 32-bit 能表示的最大與最小值。只要所有版本對同一批輸入都得到相同結果，就能較有把握地判斷後續實作沒有改變指令語意。
+
+## 6. AI 使用說明
+
+本報告的原有技術內容與貢獻承接既有 CP1；本次 ChatGPT／Codex 協助的是搬遷連結、操作命令、Windows 執行及清理說明，並在暫存副本編譯驗證原測資，沒有改動 C 核心、原測資或歷史結論。這些文件修正由本人授權，實際編輯與工具執行由 Codex 完成。
+
+原 CP1 各組員使用 AI 的詳細時機、本人修改與理解，現有資料不足以逐人證實，仍由原作者及組長確認；不以本節補述當成當時已完成的揭露，也不虛構未發生的個人工作。歷史分工見 [CP1 貢獻紀錄](CP1_CONTRIBUTIONS.md)。

@@ -35,7 +35,7 @@ if rd 不是 x0:
 
 ### 2.3 baseline 與設計理由
 
-既有 baseline 以有號 `blt` 選路徑，不跳時用 `addi` 複製第二個輸入，最後以 `jalr` 返回。靜態核心／函式指令數為 2／3；原 14 筆測資的動態路徑推算為 24／38。推算範圍不含呼叫端及測試框架，函式數包含返回。[規格中的 baseline 段落](../instructions/MIN/README.md#4-rv32im-baseline-與語意一致性)附原碼、計數表及有號比較的 5 Whys。
+既有 baseline 以有號 `blt` 選路徑，不跳時用 `addi` 複製第二個輸入，最後以 `jalr` 返回。靜態核心／函式指令數為 2／3；原 14 筆測資的動態路徑推算為 24／38。推算範圍不含呼叫端及測試框架，函式數包含返回。[規格中的 baseline 段落](../instructions/MIN/README.md#4-rv32im-baseline-與語意一致性)附原碼與計數表；有號比較的 5 Whys 見下一節。
 
 ### 2.4 5 Whys：為什麼必須使用有號比較？
 

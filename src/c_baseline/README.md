@@ -15,11 +15,13 @@ rd = min(rs1, rs2)
 
 ## 執行
 
-在專案根目錄執行：
+Linux/macOS 或已安裝 GNU make 與 C 編譯器的環境，在專案根目錄執行：
 
 ```bash
-make -C instructions/02_MIN/c_baseline test
-make -C instructions/02_MIN/c_baseline clean
+make -C src/c_baseline test
+make -C src/c_baseline clean
 ```
 
-測試成功時程式回傳碼為 0；任一案例失敗時回傳非 0。
+測試成功時程式回傳碼為 0；任一案例失敗時回傳非 0。`test` 會建立本目錄的測試執行檔；`clean` 只清除該建置目標，不可套用到保存證據目錄。Windows MinGW 應明確使用 `TARGET=test_min.exe` 執行 test 與 clean，讓清理目標與實際執行檔一致；工具寫法見 [CP1 報告](../../report/CP1.md#3-結果與分析)。
+
+若要完全不在工作樹產生產物，先將 `min.c`、`min.h`、`Makefile` 及 `../tests/test_min.c` 複製至全新的暫存副本，保留 `src/c_baseline/` 與 `src/tests/` 相對結構，再對該副本執行相同的 `test`／`clean`。本次驗收採此方式；不把測試執行檔提交。
