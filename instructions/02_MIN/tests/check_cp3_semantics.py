@@ -1,4 +1,4 @@
-"""CP3 work 2 semantics check v1.0; no compilation or cycle simulation.
+"""CP3 work 2 semantics check v1.1; no compilation or cycle simulation.
 
 Executes the preserved CP2 ELF with the existing RV32I subset interpreter.
 Custom MIN is a Python semantic model, not an executed custom instruction.
@@ -40,21 +40,61 @@ def parse_number(text):
     return constants[text] if text in constants else int(text)
 
 
+def check_document_tables(cases):
+    """Check authored examples against the existing C test table, not just the model."""
+    originals = {(a, b): expected for a, b, expected in cases}
+    spec = (ROOT / "spec/README.md").read_text(encoding="utf-8")
+    report = (ROOT.parents[1] / "report/CP3.md").read_text(encoding="utf-8")
+    spec_count = report_count = 0
+    for line in spec.splitlines():
+        cells = [x.strip().strip("`") for x in line.strip().strip("|").split("|")]
+        if len(cells) != 6 or not cells[0].isdigit():
+            continue
+        index, a, b, expected = map(int, cells[:4])
+        check(1 <= index <= len(cases) and cases[index - 1] == (a, b, expected),
+              f"Specification example does not match original case {index}")
+        check(int(cells[4], 16) == expected & MASK, "Incorrect hex output in specification")
+        spec_count += 1
+    for line in report.splitlines():
+        cells = [x.strip() for x in line.strip().strip("|").split("|")]
+        if len(cells) != 4 or not re.fullmatch(r"-?\d+", cells[0]):
+            continue
+        a, b, expected = map(int, cells[:3])
+        check(originals.get((a, b)) == expected, "Report example differs from original vector")
+        report_count += 1
+    check(spec_count == 7 and report_count == 4, "Expected 7 specification and 4 report examples")
+    print(f"Document example tables: {spec_count + report_count}/11 PASS")
+
+
 def main():
     source = (ROOT / "tests/test_min.c").read_text(encoding="utf-8-sig")
     rows = re.findall(r'\{"[^"]*",\s*([^,]+),\s*([^,]+),\s*([^}]+)\}', source)
     cases = [tuple(parse_number(x) for x in row) for row in rows]
     check(len(cases) == 14, "Expected the original 14 C test vectors")
+    check_document_tables(cases)
 
     spec = importlib.util.spec_from_file_location("cp2_semantics_baseline", ROOT / "tests/check_cp2.py")
     cp2 = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(cp2)
     evidence = ROOT / "references/validation/2026-10-23-gcc15/gcc_run_fixed"
+    snapshot = evidence.parent / "source_snapshot"
+    for relative in ("rv32im/min_branch.S", "c_baseline/min.c", "tests/test_min.c"):
+        check((ROOT / relative).read_text(encoding="utf-8-sig") ==
+              (snapshot / relative).read_text(encoding="utf-8-sig"),
+              f"Current source differs from preserved snapshot: {relative}")
     binary = evidence / "min_rv32im.elf"
     metadata = json.loads((evidence / "measurements.json").read_text(encoding="utf-8-sig"))
     check(hashlib.sha256(binary.read_bytes()).hexdigest() == metadata["binary_sha256"],
           "Preserved ELF hash does not match its evidence")
     elf = cp2.ELF32(binary)
+    start, size = elf.symbols["min_branch"]
+    check(size == 12, "Expected three RV32I instructions in min_branch")
+    codes = [elf.read_u32(start + offset) for offset in (0, 4, 8)]
+    check(codes == [0x00B54463, 0x00058513, 0x00008067],
+          "Saved branch machine code differs from the documented baseline")
+    check(elf.static_metrics("min_branch")["instructions"] == 3,
+          "Incorrect static baseline instruction count")
+    print("Source snapshots + preserved ELF hash/instruction shape: PASS")
     total_ic = 0
     taken = 0
     for a, b, expected in cases:
@@ -82,7 +122,10 @@ def main():
             regs = [0] * 32
             regs[10], regs[11] = a & MASK, b & MASK
             before = regs[:]
-            expected = min(signed32(before[rs1]), signed32(before[rs2])) & MASK
+            # Independent signed conversion avoids testing signed32 against itself.
+            a_signed = int.from_bytes(before[rs1].to_bytes(4, "little"), "little", signed=True)
+            b_signed = int.from_bytes(before[rs2].to_bytes(4, "little"), "little", signed=True)
+            expected = min(a_signed, b_signed) & MASK
             apply_min(regs, rd, rs1, rs2)
             check(regs[rd] == (expected if rd else 0), "Register writeback mismatch")
             check(all(regs[i] == before[i] for i in range(32) if i != rd),
@@ -90,7 +133,7 @@ def main():
             checks += 1
     print("Preserved branch ELF boundary grid: 49/49 PASS")
     print(f"Custom semantic model boundary/writeback checks: {checks}/{checks} PASS")
-    print(f"Python: {sys.version.split()[0]}; semantic checker v1.0; CP2 subset interpreter v1.0")
+    print(f"Python: {sys.version.split()[0]}; semantic checker v1.1; CP2 subset interpreter v1.0")
     print("No native compilation, custom-opcode execution, cycles or speedup measured.")
 
 

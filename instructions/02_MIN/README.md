@@ -25,7 +25,7 @@
 |---|---|
 | CP1 C baseline | [C 參考實作](c_baseline/README.md)、[測試與測資](tests/README.md)、[CP1 報告](report/CP1.md) |
 | CP2 RV32IM | [目錄說明](rv32im/README.md)、[CP2 報告](report/CP2.md) |
-| CP3 指令規格與編碼（後續階段，非已完成聲明） | [目錄說明](spec/README.md) |
+| CP3 工作二：語意與測試範例 | [正式語意規格](spec/README.md)、[報告工作二段落](../../report/CP3.md)、[修改與驗證紀錄](../../report/CP3_WORK2_RECORD.md)；工作三／四另行整合 |
 | 參考資料 | [目錄說明](references/README.md) |
 
 ## CP2驗證與文件

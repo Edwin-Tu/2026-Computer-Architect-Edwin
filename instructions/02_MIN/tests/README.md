@@ -1,5 +1,9 @@
 # MIN 測試與測資
 
+## CP3 工作二：語意與文件一致性檢查
+
+從專案根目錄執行 `python -B instructions/02_MIN/tests/check_cp3_semantics.py`。此檢查核對原 14 筆測資、規格與報告範例，執行保存的 Branch ELF，並測試語意模型的邊界及暫存器寫回；不重新編譯、不執行自訂 opcode，也不量測 cycles。來源、工具版本與結果見[工作二紀錄](../../../report/CP3_WORK2_RECORD.md)。
+
 此目錄包含 CP1 C baseline 測試程式 [test_min.c](test_min.c)，以表格逐筆列出輸入與預期結果，共 14 組，符合至少 10 組測資的要求，並涵蓋 `INT32_MIN`、`INT32_MAX` 邊界值。
 
 從專案根目錄執行 `make -C instructions/02_MIN/c_baseline test`，即可逐筆比對實際結果與預期值。測試結果與分析見 [CP1 報告](../report/CP1.md)。

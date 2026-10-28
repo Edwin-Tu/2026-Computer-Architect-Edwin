@@ -1,6 +1,6 @@
 # 報告索引
 
-- [CP3 工作二本機審閱稿](CP3.md)：MIN 語意、虛擬碼與範例，尚待全組整合。
+- [CP3 工作二交付內容](CP3.md)：MIN 語意、虛擬碼與範例；全組編碼及完整比較另行整合。
 - [CP3 工作二修改與驗證紀錄](CP3_WORK2_RECORD.md)。
 
 - [MIN CP1](../instructions/02_MIN/report/CP1.md)：C baseline與原測資報告。
