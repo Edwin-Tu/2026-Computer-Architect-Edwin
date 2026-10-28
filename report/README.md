@@ -24,3 +24,14 @@
 - [CP2實驗指南](CP2_MIN_執行指令與實驗紀錄.md)
 - [CP2證據索引](../src/references/README.md)
 - [CP2文件維護](CP2_MAINTENANCE.md)
+
+## MIN 來源、貢獻與證據承接
+
+舊 `instructions/02_MIN/README.md` 與其報告索引的有效資訊集中於此，不恢復第二套規格或報告。
+
+- CP2 歷史整合基底為 `3e169d5`，含 main `e084ba0` 與 dev 既有成果；dev 的 `min_s32.S` 來源為 `07736e2`，main 驗證來源為 `e084ba0`。
+- [CP1 貢獻紀錄](CP1_CONTRIBUTIONS.md)與 [CP2 貢獻聲明](CP2_CONTRIBUTIONS.md)保存歷史分工；不以此次文件整理或 Commit 數重分配貢獻。
+- [RV32IM 來源導覽](../src/rv32im/README.md)區分 dev 核心與 main 三函式證據。[來源與證據索引](../src/references/README.md)分列保存結果。
+- CP2 的 main 來源驗證 5,199／49 筆與流程回歸 22/22 不代表 dev `min_s32.S` 已通過同組驗證，也不代表目前重新編譯；沒有量測週期或實測 speedup。
+
+本次相容性修正恢復課程模板與 MAC 示範，保留正式 MIN 結構，調整交付檢查範圍；未整合組員尚待確認的 CP3 草稿，未修改保存證據或雜湊清單。修正由本人要求，Codex 協助編輯與驗證。

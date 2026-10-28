@@ -1,0 +1,431 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1554" height="520" font-family="monospace" font-size="13">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="201.0" y="28" text-anchor="middle">C1</text>
+<text x="263.0" y="28" text-anchor="middle">C2</text>
+<text x="325.0" y="28" text-anchor="middle">C3</text>
+<text x="387.0" y="28" text-anchor="middle">C4</text>
+<text x="449.0" y="28" text-anchor="middle">C5</text>
+<text x="511.0" y="28" text-anchor="middle">C6</text>
+<text x="573.0" y="28" text-anchor="middle">C7</text>
+<text x="635.0" y="28" text-anchor="middle">C8</text>
+<text x="697.0" y="28" text-anchor="middle">C9</text>
+<text x="759.0" y="28" text-anchor="middle">C10</text>
+<text x="821.0" y="28" text-anchor="middle">C11</text>
+<text x="883.0" y="28" text-anchor="middle">C12</text>
+<text x="945.0" y="28" text-anchor="middle">C13</text>
+<text x="1007.0" y="28" text-anchor="middle">C14</text>
+<text x="1069.0" y="28" text-anchor="middle">C15</text>
+<text x="1131.0" y="28" text-anchor="middle">C16</text>
+<text x="1193.0" y="28" text-anchor="middle">C17</text>
+<text x="1255.0" y="28" text-anchor="middle">C18</text>
+<text x="1317.0" y="28" text-anchor="middle">C19</text>
+<text x="1379.0" y="28" text-anchor="middle">C20</text>
+<text x="1441.0" y="28" text-anchor="middle">C21</text>
+<text x="1503.0" y="28" text-anchor="middle">C22</text>
+<text x="8" y="60.0">lw t0, 0(a0)</text>
+<rect x="170" y="40" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="201.0" y="60.0" text-anchor="middle">IF</text>
+<rect x="232" y="40" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="263.0" y="60.0" text-anchor="middle">ID</text>
+<rect x="294" y="40" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="325.0" y="60.0" text-anchor="middle">EX</text>
+<rect x="356" y="40" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="387.0" y="60.0" text-anchor="middle">MEM</text>
+<rect x="418" y="40" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="449.0" y="60.0" text-anchor="middle">WB</text>
+<rect x="480" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="666" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1286" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="40" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="90.0">lw t1, 0(a1)</text>
+<rect x="170" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="70" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="263.0" y="90.0" text-anchor="middle">IF</text>
+<rect x="294" y="70" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="325.0" y="90.0" text-anchor="middle">ID</text>
+<rect x="356" y="70" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="387.0" y="90.0" text-anchor="middle">EX</text>
+<rect x="418" y="70" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="449.0" y="90.0" text-anchor="middle">MEM</text>
+<rect x="480" y="70" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="511.0" y="90.0" text-anchor="middle">WB</text>
+<rect x="542" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="666" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1286" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="70" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="120.0">mac t3, t0, t1</text>
+<rect x="170" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="100" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="325.0" y="120.0" text-anchor="middle">IF</text>
+<rect x="356" y="100" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="387.0" y="120.0" text-anchor="middle">ID</text>
+<rect x="418" y="100" width="62" height="30" fill="#f7f7f7" stroke="#999"/>
+<text x="449.0" y="120.0" text-anchor="middle"></text>
+<rect x="480" y="100" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="511.0" y="120.0" text-anchor="middle">EX</text>
+<rect x="542" y="100" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="573.0" y="120.0" text-anchor="middle">MEM</text>
+<rect x="604" y="100" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="635.0" y="120.0" text-anchor="middle">WB</text>
+<rect x="666" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1286" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="100" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="150.0">addi a0, a0, 4</text>
+<rect x="170" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="130" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="449.0" y="150.0" text-anchor="middle">IF</text>
+<rect x="480" y="130" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="511.0" y="150.0" text-anchor="middle">ID</text>
+<rect x="542" y="130" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="573.0" y="150.0" text-anchor="middle">EX</text>
+<rect x="604" y="130" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="635.0" y="150.0" text-anchor="middle">MEM</text>
+<rect x="666" y="130" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="697.0" y="150.0" text-anchor="middle">WB</text>
+<rect x="728" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1286" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="130" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="180.0">addi a1, a1, 4</text>
+<rect x="170" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="160" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="511.0" y="180.0" text-anchor="middle">IF</text>
+<rect x="542" y="160" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="573.0" y="180.0" text-anchor="middle">ID</text>
+<rect x="604" y="160" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="635.0" y="180.0" text-anchor="middle">EX</text>
+<rect x="666" y="160" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="697.0" y="180.0" text-anchor="middle">MEM</text>
+<rect x="728" y="160" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="759.0" y="180.0" text-anchor="middle">WB</text>
+<rect x="790" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1286" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="160" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="210.0">addi a2, a2, -1</text>
+<rect x="170" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="190" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="573.0" y="210.0" text-anchor="middle">IF</text>
+<rect x="604" y="190" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="635.0" y="210.0" text-anchor="middle">ID</text>
+<rect x="666" y="190" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="697.0" y="210.0" text-anchor="middle">EX</text>
+<rect x="728" y="190" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="759.0" y="210.0" text-anchor="middle">MEM</text>
+<rect x="790" y="190" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="821.0" y="210.0" text-anchor="middle">WB</text>
+<rect x="852" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1286" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="190" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="240.0">bnez a2, loop</text>
+<rect x="170" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="220" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="635.0" y="240.0" text-anchor="middle">IF</text>
+<rect x="666" y="220" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="697.0" y="240.0" text-anchor="middle">ID</text>
+<rect x="728" y="220" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="759.0" y="240.0" text-anchor="middle">EX</text>
+<rect x="790" y="220" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="821.0" y="240.0" text-anchor="middle">MEM</text>
+<rect x="852" y="220" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="883.0" y="240.0" text-anchor="middle">WB</text>
+<rect x="914" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1286" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="220" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="270.0">lw t0, 0(a0)</text>
+<rect x="170" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="666" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="250" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="821.0" y="270.0" text-anchor="middle">IF</text>
+<rect x="852" y="250" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="883.0" y="270.0" text-anchor="middle">ID</text>
+<rect x="914" y="250" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="945.0" y="270.0" text-anchor="middle">EX</text>
+<rect x="976" y="250" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="1007.0" y="270.0" text-anchor="middle">MEM</text>
+<rect x="1038" y="250" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="1069.0" y="270.0" text-anchor="middle">WB</text>
+<rect x="1100" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1286" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="250" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="300.0">lw t1, 0(a1)</text>
+<rect x="170" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="666" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="280" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="883.0" y="300.0" text-anchor="middle">IF</text>
+<rect x="914" y="280" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="945.0" y="300.0" text-anchor="middle">ID</text>
+<rect x="976" y="280" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="1007.0" y="300.0" text-anchor="middle">EX</text>
+<rect x="1038" y="280" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="1069.0" y="300.0" text-anchor="middle">MEM</text>
+<rect x="1100" y="280" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="1131.0" y="300.0" text-anchor="middle">WB</text>
+<rect x="1162" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1286" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="280" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="330.0">mac t3, t0, t1</text>
+<rect x="170" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="666" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="310" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="945.0" y="330.0" text-anchor="middle">IF</text>
+<rect x="976" y="310" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="1007.0" y="330.0" text-anchor="middle">ID</text>
+<rect x="1038" y="310" width="62" height="30" fill="#f7f7f7" stroke="#999"/>
+<text x="1069.0" y="330.0" text-anchor="middle"></text>
+<rect x="1100" y="310" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="1131.0" y="330.0" text-anchor="middle">EX</text>
+<rect x="1162" y="310" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="1193.0" y="330.0" text-anchor="middle">MEM</text>
+<rect x="1224" y="310" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="1255.0" y="330.0" text-anchor="middle">WB</text>
+<rect x="1286" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1348" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="310" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="360.0">addi a0, a0, 4</text>
+<rect x="170" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="666" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="340" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="1069.0" y="360.0" text-anchor="middle">IF</text>
+<rect x="1100" y="340" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="1131.0" y="360.0" text-anchor="middle">ID</text>
+<rect x="1162" y="340" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="1193.0" y="360.0" text-anchor="middle">EX</text>
+<rect x="1224" y="340" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="1255.0" y="360.0" text-anchor="middle">MEM</text>
+<rect x="1286" y="340" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="1317.0" y="360.0" text-anchor="middle">WB</text>
+<rect x="1348" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1410" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="340" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="390.0">addi a1, a1, 4</text>
+<rect x="170" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="666" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="370" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="1131.0" y="390.0" text-anchor="middle">IF</text>
+<rect x="1162" y="370" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="1193.0" y="390.0" text-anchor="middle">ID</text>
+<rect x="1224" y="370" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="1255.0" y="390.0" text-anchor="middle">EX</text>
+<rect x="1286" y="370" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="1317.0" y="390.0" text-anchor="middle">MEM</text>
+<rect x="1348" y="370" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="1379.0" y="390.0" text-anchor="middle">WB</text>
+<rect x="1410" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1472" y="370" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="420.0">addi a2, a2, -1</text>
+<rect x="170" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="666" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="400" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="1193.0" y="420.0" text-anchor="middle">IF</text>
+<rect x="1224" y="400" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="1255.0" y="420.0" text-anchor="middle">ID</text>
+<rect x="1286" y="400" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="1317.0" y="420.0" text-anchor="middle">EX</text>
+<rect x="1348" y="400" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="1379.0" y="420.0" text-anchor="middle">MEM</text>
+<rect x="1410" y="400" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="1441.0" y="420.0" text-anchor="middle">WB</text>
+<rect x="1472" y="400" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<text x="8" y="450.0">bnez a2, loop</text>
+<rect x="170" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="232" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="294" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="356" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="418" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="480" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="542" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="604" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="666" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="728" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="790" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="852" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="914" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="976" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1038" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1100" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1162" y="430" width="62" height="30" fill="#ffffff" stroke="#999"/>
+<rect x="1224" y="430" width="62" height="30" fill="#9ecae1" stroke="#999"/>
+<text x="1255.0" y="450.0" text-anchor="middle">IF</text>
+<rect x="1286" y="430" width="62" height="30" fill="#a1d99b" stroke="#999"/>
+<text x="1317.0" y="450.0" text-anchor="middle">ID</text>
+<rect x="1348" y="430" width="62" height="30" fill="#fdae6b" stroke="#999"/>
+<text x="1379.0" y="450.0" text-anchor="middle">EX</text>
+<rect x="1410" y="430" width="62" height="30" fill="#bdbdbd" stroke="#999"/>
+<text x="1441.0" y="450.0" text-anchor="middle">MEM</text>
+<rect x="1472" y="430" width="62" height="30" fill="#bcbddc" stroke="#999"/>
+<text x="1503.0" y="450.0" text-anchor="middle">WB</text>
+<rect x="170" y="473" width="14" height="14" fill="#9ecae1" stroke="#999"/>
+<text x="190" y="485">IF</text>
+<rect x="260" y="473" width="14" height="14" fill="#a1d99b" stroke="#999"/>
+<text x="280" y="485">ID</text>
+<rect x="350" y="473" width="14" height="14" fill="#fdae6b" stroke="#999"/>
+<text x="370" y="485">EX</text>
+<rect x="440" y="473" width="14" height="14" fill="#bdbdbd" stroke="#999"/>
+<text x="460" y="485">MEM</text>
+<rect x="530" y="473" width="14" height="14" fill="#bcbddc" stroke="#999"/>
+<text x="550" y="485">WB</text>
+<rect x="620" y="473" width="14" height="14" fill="#f7f7f7" stroke="#999"/>
+<text x="640" y="485">stall</text>
+</svg>

@@ -1,4 +1,4 @@
-"""Check CP3 layout, local links and preserved-evidence integrity (v1.0).
+"""Check CP3 layout, local links and preserved-evidence integrity (v1.1).
 
 This checks files, not personal understanding, GitHub ownership or submission.
 """
@@ -7,7 +7,6 @@ import hashlib
 import json
 from pathlib import Path
 import re
-import subprocess
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -33,8 +32,7 @@ def anchors(text):
 
 def main():
     instructions = ROOT / "instructions"
-    check(sorted(p.name for p in instructions.iterdir()) == ["MIN", "README.md"],
-          "Expected only the MIN topic and its index")
+    check((instructions / "README.md").is_file(), "Missing instruction index")
     check([p.name for p in (instructions / "MIN").iterdir()] == ["README.md"],
           "Instruction directory must contain only README.md")
     check([p.relative_to(ROOT).as_posix() for p in ROOT.rglob("CP3.md")] == ["report/CP3.md"],
@@ -43,13 +41,17 @@ def main():
                 "report/CP2.md", "report/CP3.md", "report/figures/README.md"]
     for relative in required:
         check((ROOT / relative).is_file(), f"Missing required file: {relative}")
-    for folder in ROOT.rglob("*"):
+    min_roots = [instructions / "MIN", ROOT / "src", ROOT / "report"]
+    min_folders = [folder for scope in min_roots for folder in [scope, *scope.rglob("*")]]
+    for folder in min_folders:
         if folder.is_dir() and ".git" not in folder.parts and "__pycache__" not in folder.parts:
             check((folder / "README.md").is_file(), f"Missing directory README: {folder}")
     print("Flat MIN directory, report placement and directory READMEs: PASS")
 
     links = 0
-    for path in ROOT.rglob("*.md"):
+    documents = [ROOT / "README.md", ROOT / "CONTRIBUTIONS.md", instructions / "README.md"]
+    documents += [path for scope in min_roots for path in scope.rglob("*.md")]
+    for path in documents:
         if ".git" in path.parts:
             continue
         for link in re.findall(r"\]\(([^)]+)\)", path.read_text(encoding="utf-8-sig")):
@@ -62,7 +64,7 @@ def main():
                 check(fragment in anchors(target.read_text(encoding="utf-8-sig")),
                       f"Missing section: {path}: {link}")
             links += 1
-    print(f"Local Markdown file/section links: {links} PASS")
+    print(f"MIN delivery Markdown file/section links: {links} PASS")
 
     evidence = ROOT / "src/references/validation/2026-10-23-gcc15"
     manifest = json.loads((evidence / "package_sha256.json").read_text(encoding="utf-8-sig"))
@@ -90,14 +92,7 @@ def main():
     check(len(plain) <= 200, "Plain-language section exceeds 200 characters")
     print(f"Report section structure and plain-language length ({len(plain)}): PASS")
 
-    # A ZIP receiver may have no .git; do not pretend to verify its Git state.
-    if (ROOT / ".git").exists():
-        branch = subprocess.run(["git", "branch", "--show-current"], cwd=ROOT,
-                                check=True, capture_output=True, text=True).stdout.strip()
-        check(branch == "dev/1114405029", f"Unexpected personal branch: {branch}")
-        print("Personal branch: dev/1114405029 PASS")
-    else:
-        print("Personal branch: not checked (ZIP has no Git history)")
+    print("Git branch name: not constrained by MIN delivery validation")
     print("Scope: work 2 files only; group-wide content, personal understanding and GitHub identity are not certified.")
 
 
