@@ -110,6 +110,8 @@ Fetch   Decode     自訂指令執行    (是否使用)  Writeback
 
 ## 環境建置說明
 
+以下保留課程原始安裝參考，不屬於工作二驗證命令。本次不安裝 WSL、套件或 Homebrew；不同系統的工具前綴須依實際安裝確認，例如 Ubuntu 套件通常提供 `riscv64-unknown-elf-gcc`，macOS 範例採 `riscv64-elf-gcc`。本分支的現行驗證入口與限制見文末 MIN 章節。
+
 學生需要的工具依進度逐步使用,不需要一次全部安裝。請依自己的電腦選擇對應的平台說明。
 
 | 電腦 | 對應章節 |
@@ -248,3 +250,60 @@ riscv64-elf-gcc --version
 
 - 作業與公告以課程平台為準
 - 分組與選題問題請於 2026/10/09 前洽授課教師或助教
+
+---
+
+# MIN — CP3 工作二交付與組內整合
+
+本專案題目為 **MIN：兩個 32-bit 有號整數取小**，不是其他題目的作業。現在交付工作二的語意規格、虛擬碼、測試範例及 baseline 對照；工作三的編碼與工作四的完整比較、全組貢獻聲明仍由負責組員整合。
+
+## 接手閱讀順序
+
+1. [報告索引](report/README.md)：先讀 CP1／CP2 既有報告、分工與證據承接，再進入以下 CP3 文件；整合前須比對上一位組員的提交。
+2. [CP3 報告](report/CP3.md)：目前工作二內容；全組只整合這一份 CP3.md。
+3. [MIN 正式語意](instructions/MIN/README.md)：工作二完整技術定義，報告摘要須保持一致。
+4. [修改與驗證紀錄](report/CP3_WORK2_RECORD.md)：實際操作與證據界線，不另定義指令。
+
+## 目錄
+
+```text
+instructions/
+  README.md
+  MIN/
+    README.md
+report/
+  README.md
+  CP1.md
+  CP2.md
+  CP3.md
+  CP3_WORK2_RECORD.md
+  figures/
+    README.md
+src/
+  README.md
+  c_baseline/
+  rv32im/
+  tests/
+  references/
+```
+
+上圖只列 MIN 正式交付範圍；MIN 指令目錄只保留 README，實作與測試放在 src，報告集中於 report。保留的其他題目模板仍是老師原始結構，不據此宣稱全倉庫所有目錄都已符合 MIN 扁平規則。老師規定見 [HOMEWORK.md](HOMEWORK.md)。原始來源、測資、機器碼與原始 log 保留；說明文件的相對連結依新位置更新。搬動前版本可由 Git 歷史追溯；老師示範及其他題目模板保留原位，不列為本組成果。
+
+## 重現工作二驗證
+
+從專案根目錄執行：
+
+```bash
+python -B src/tests/check_cp3_semantics.py
+python -B src/tests/check_cp3_delivery.py
+```
+
+此檢查核對文件範例、原 14 筆測資、保存 Branch ELF 及語意模型，不重新編譯、不執行自訂 opcode，也不量測週期或加速。
+
+## 協作與整合
+
+本分支 `dev/1114405029-work2` 保存六筆工作二提交及後續相容性修正。全組 CP3、貢獻比例與正式繳交仍待組長整合；GitHub 上傳狀態以遠端查詢為準。
+
+老師示範與其他題目模板保留作課程參考，不列為本組 MIN 成果。正式 MIN 僅有 `instructions/MIN/README.md`、`src/` 與 `report/`；舊 `instructions/02_MIN/` 不再維護第二套規格或報告。
+
+AI 工具與實際編輯範圍見 [CP3 AI 使用說明](report/CP3.md#6-ai-使用說明)。
