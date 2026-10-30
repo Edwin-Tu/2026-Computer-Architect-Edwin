@@ -1,7 +1,46 @@
 # 報告索引
 
-- [MIN CP1](../instructions/02_MIN/report/CP1.md)：C baseline與原測資報告。
-- [MIN CP2](../instructions/02_MIN/report/CP2.md)：dev核心與main來源驗證的分列說明。
-- [CP2實驗指南](../instructions/02_MIN/report/CP2_MIN_執行指令與實驗紀錄.md)
-- [CP2證據索引](../instructions/02_MIN/references/README.md)
-- [CP2文件維護](../instructions/02_MIN/report/CP2_MAINTENANCE.md)
+## CP3：目前閱讀入口
+
+本專案的 CP3 報告統一存放於根目錄 [report/CP3.md](CP3.md)，不在舊報告目錄另建第二份 CP3.md。
+
+| 文件 | 用途與整合規則 |
+|---|---|
+| [CP3 報告](CP3.md) | 全組報告的唯一整合入口。已整合語意、編碼與四版本比較；正式確認事項見結案清單。 |
+| [MIN 語意規格](../instructions/MIN/README.md) | 工作二語意、虛擬碼、範例及 baseline 定義的完整來源；報告摘要須與此一致。 |
+| [工作二修改與驗證紀錄](CP3_WORK2_RECORD.md) | 說明實際修改、驗證及來源界線，不另定義指令語意。 |
+
+接手時先讀下方 CP1／CP2 報告、貢獻及來源證據，確認上一位組員完成的內容，再讀上述三份 CP3 文件、工作二紀錄的正式移植補記與最近的 commit，最後修改自己負責的段落。變更語意、範例或計數時，同時核對報告摘要、規格、測試與紀錄；不能只改其中一份，也不能把工作二完成寫成全組 CP3 已完成。若內容有差異，停止合併，由負責人共同核對教師規格及原始證據後修正，不任選一份當答案。
+
+- [CP3 工作二交付內容](CP3.md)：MIN 語意、虛擬碼與範例；全組編碼及完整比較已整合。
+- [CP3 工作二修改與驗證紀錄](CP3_WORK2_RECORD.md)。
+
+## 歷史報告與證據索引
+
+下列為歷史資料入口，不是另一套 CP3 報告或 CP3 完成狀態。
+
+- [MIN CP1](CP1.md)：C baseline與原測資報告。
+- [MIN CP2](CP2.md)：dev核心與main來源驗證的分列說明。
+- [CP2實驗指南](CP2_MIN_執行指令與實驗紀錄.md)
+- [CP2證據索引](../src/references/README.md)
+- [CP2文件維護](CP2_MAINTENANCE.md)
+
+## MIN 來源、貢獻與證據承接
+
+舊 `instructions/02_MIN/README.md` 與其報告索引的有效資訊集中於此，不恢復第二套規格或報告。
+
+- CP2 歷史整合基底為 `3e169d5`，含 main `e084ba0` 與 dev 既有成果；dev 的 `min_s32.S` 來源為 `07736e2`，main 驗證來源為 `e084ba0`。
+- [CP1 貢獻紀錄](CP1_CONTRIBUTIONS.md)與 [CP2 貢獻聲明](CP2_CONTRIBUTIONS.md)保存歷史分工；不以此次文件整理或 Commit 數重分配貢獻。
+- [RV32IM 來源導覽](../src/rv32im/README.md)區分 dev 核心與 main 三函式證據。[來源與證據索引](../src/references/README.md)分列保存結果。
+- CP2 的 main 來源驗證 5,199／49 筆與流程回歸 22/22 不代表 dev `min_s32.S` 已通過同組驗證，也不代表目前重新編譯；沒有量測週期或實測 speedup。
+
+上述相容性修正是工作二歷史階段的背景，當時尚未整合全組草稿；目前CP3技術內容已整合，現行確認事項見下節。保存證據與雜湊清單維持原狀。
+
+
+## 目前整合與確認狀態
+
+- [根目錄貢獻聲明](../CONTRIBUTIONS.md)已合併CP1～CP3；各階段四人學號已列出、各25%、合計100%。正式姓名差異與全組確認狀態依該檔案說明。
+- CP3已整合語意、編碼、反解及四版本指令數比較，不再列為「工作三／四尚未加入」。
+- 教師正式funct來源、個人AI使用與理解、全組貢獻確認及正式PR／main／tag仍需相應負責人確認。
+- [AI與文件檢視](AI_REVIEW.md)區分現行缺漏、已修正錯誤與歷史記錄，不能把舊階段的待確認一律當作目前缺件。
+- [CP3結案清單](CP3_CLOSEOUT.md)列驗收及正式提交要求；本機驗收不代表老師已收件。

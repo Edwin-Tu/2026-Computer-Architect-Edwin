@@ -1,4 +1,3 @@
-# 02_MIN/spec/
+# MIN 規格入口
 
-- 對應 Checkpoint:CP3
-- 內容:語意規格、虛擬碼、編碼範例(格式見 HOMEWORK.md 第 6.7 節)
+正式語意、虛擬碼與邊界範例見[MIN規格](../../MIN/README.md)；編碼與比較見[CP3報告](../../../report/CP3.md)。教師funct分配來源待核對。

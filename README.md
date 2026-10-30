@@ -9,6 +9,8 @@
 | 文件 | 內容 |
 |---|---|
 | [HOMEWORK.md](HOMEWORK.md) | 作業說明:分組規則、選題、指令格式、繳交與報告規範、題目語意規格 |
+| [CONTRIBUTIONS.md](CONTRIBUTIONS.md) | CP1～CP3分工、學號、比例與AI協助界線 |
+| [AI與文件檢視](report/AI_REVIEW.md) | 已修正問題、歷史紀錄與仍需本人確認的事項 |
 | `mac_demo/` | 教師示範題 `MAC` 的編碼、C 參考實作、5 級 pipeline 模型與時序圖 |
 
 學生相關的規定以 [HOMEWORK.md](HOMEWORK.md) 為準。
