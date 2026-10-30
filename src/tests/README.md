@@ -34,3 +34,7 @@
 ## 原驗證工具的版本界線
 
 本目錄的[check_cp2.py](check_cp2.py)為基底保存的v1.0原工具，沿用舊src路徑及固定build輸出，不能直接當作本次v1.2.1驗證入口。該歷史工具保留原文；目前可重現入口為證據包source_snapshot/tests/check_cp2.py及相符回歸腳本，操作方法見實驗指南。
+
+## CP3 全組整合驗收
+
+執行 python -B src/tests/check_cp3_integration.py，核對三筆公開編碼與反解，以及保存ELF三版本的原14筆結果與報告比較表。[結案流程](../../report/CP3_CLOSEOUT.md)列出正式提交前的人工確認。
