@@ -1,0 +1,12 @@
+
+min_s32.o:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <min_s32>:
+   0:	00b54463          	blt	a0,a1,8 <.Lreturn_rs1>
+   4:	00058513          	addi	a0,a1,0
+
+00000008 <.Lreturn_rs1>:
+   8:	00008067          	jalr	zero,0(ra)

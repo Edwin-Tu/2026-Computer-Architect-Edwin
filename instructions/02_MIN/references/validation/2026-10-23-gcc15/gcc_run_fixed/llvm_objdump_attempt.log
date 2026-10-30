@@ -1,0 +1,4 @@
+exit_code=1
+
+C:\Users\kuro\AppData\Local\Temp\MIN_CP2_review_20261023_141302_33ae77\source_rebuild_20261023_144721_3b660d\gcc_run_fixed\min_rv32im.elf:	file format elf32-littleriscv
+C:/Program Files/CodeBlocks/MinGW/bin/llvm-objdump.exe: error: 'C:\Users\kuro\AppData\Local\Temp\MIN_CP2_review_20261023_141302_33ae77\source_rebuild_20261023_144721_3b660d\gcc_run_fixed\min_rv32im.elf': can't find target: unable to get target for 'riscv32--', see --version and --triple.
